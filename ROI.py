@@ -1,9 +1,9 @@
-    """
-        About the class:
-        I designed this calculator to be one shot per execution, with a small twist in expenses.
-        The class takes the calculated ROI, the calculated cashflow, the income, and a dictionary 
-        containing all of the recorded expenses.
-    """
+"""
+    About the class:
+    I designed this calculator to be one shot per execution, with a small twist in expenses.
+    The class takes the calculated ROI, the calculated cashflow, the income, and a dictionary 
+    containing all of the recorded expenses.
+"""
 
 class ROI():
     def __init__ (self, currentROI=0, cashflow=0, expenses={}, income=0):
@@ -90,7 +90,7 @@ class ROI():
             housecash = input("Please enter numbers only, or type 'BACK' to return to the main menu ")
             if housecash.isnumeric():
                 print("Please add any other anticipated initial expenses and record the TOTAL of these other expenses here")
-                othercash = input("Please enter numbers only, or 0 if you don't anticipate any extra expenses")
+                othercash = input("Please enter numbers only, or 0 if you don't anticipate any extra expenses ")
                 if othercash.isnumeric():
                     initinvest = int(housecash) + int(othercash)
                     self.currentROI = ((self.cashflow * 12) / initinvest) * 100
